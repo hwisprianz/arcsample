@@ -24,12 +24,17 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures {
+        viewBinding true
+    }
+
+    resourcePrefix "arc_"
 }
 
 dependencies {
 
     implementation "androidx.appcompat:appcompat:$android_appcompat_version"
-    implementation "com.google.android.material:material:$android_appcompat_version"
+    implementation "com.google.android.material:material:$android_material_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
