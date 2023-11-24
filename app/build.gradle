@@ -44,6 +44,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$android_appcompat_version"
     implementation "com.google.android.material:material:$android_material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation project(path: ':scaffold')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

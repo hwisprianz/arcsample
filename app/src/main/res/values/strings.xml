@@ -1,3 +1,7 @@
 <resources>
+
     <string name="app_name">ArcSample</string>
+
+    <string name="func_date_picker">date picker</string>
+
 </resources>

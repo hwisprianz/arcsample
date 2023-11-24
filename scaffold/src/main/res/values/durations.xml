@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Begin and end on screen -->
+    <integer name="scaffold_anim_emphasized">500</integer>
+
+    <!-- Enter the screen -->
+    <integer name="scaffold_anim_emphasized_decelerate">400</integer>
+
+    <!-- Exit the screen -->
+    <integer name="scaffold_anim_emphasized_accelerate">200</integer>
+
+    <!-- Begin and end on Screen -->
+    <integer name="scaffold_anim_standard">300</integer>
+
+    <!-- Enter screen -->
+    <integer name="scaffold_anim_standard_decelerate">250</integer>
+
+    <!-- Exit screen -->
+    <integer name="scaffold_anim_standard_accelerate">200</integer>
+
+</resources>

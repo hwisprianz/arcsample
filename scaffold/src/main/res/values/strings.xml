@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="scaffold_cancel">Cancel</string>
+    <string name="scaffold_ok">OK</string>
+    <string name="scaffold_date_picker_title">Date Picker</string>
+
+    <string name="scaffold_year_title">Year</string>
+    <string name="scaffold_month_title">Month</string>
+    <string name="scaffold_day_title">Day</string>
+
+    <string name="scaffold_text_placeholder">-</string>
+
+</resources>

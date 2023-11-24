@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scaffold_cancel">取消</string>
+    <string name="scaffold_ok">确定</string>
+    <string name="scaffold_date_picker_title">选择日期</string>
+    <string name="scaffold_year_title">年</string>
+    <string name="scaffold_month_title">月</string>
+    <string name="scaffold_day_title">日</string>
+    <string name="scaffold_text_placeholder">-</string>
+</resources>

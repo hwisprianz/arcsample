@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="scaffold_rounding_extra_small">4dp</dimen>
+    <dimen name="scaffold_rounding_small">8dp</dimen>
+    <dimen name="scaffold_rounding_medium">12dp</dimen>
+    <dimen name="scaffold_rounding_large">128dp</dimen>
+
+</resources>

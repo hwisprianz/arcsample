@@ -1,32 +1,89 @@
 <resources>
 
     <style name="ScaffoldTheme" parent="Theme.Material3.Light.NoActionBar">
-        <item name="colorPrimary">@color/md_theme_light_primary</item>
-        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_light_primaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
-        <item name="colorSecondary">@color/md_theme_light_secondary</item>
-        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
-        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
-        <item name="colorTertiary">@color/md_theme_light_tertiary</item>
-        <item name="colorOnTertiary">@color/md_theme_light_onTertiary</item>
-        <item name="colorTertiaryContainer">@color/md_theme_light_tertiaryContainer</item>
-        <item name="colorOnTertiaryContainer">@color/md_theme_light_onTertiaryContainer</item>
-        <item name="colorError">@color/md_theme_light_error</item>
-        <item name="colorErrorContainer">@color/md_theme_light_errorContainer</item>
-        <item name="colorOnError">@color/md_theme_light_onError</item>
-        <item name="colorOnErrorContainer">@color/md_theme_light_onErrorContainer</item>
-        <item name="android:colorBackground">@color/md_theme_light_background</item>
-        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
-        <item name="colorSurface">@color/md_theme_light_surface</item>
-        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
-        <item name="colorSurfaceVariant">@color/md_theme_light_surfaceVariant</item>
-        <item name="colorOnSurfaceVariant">@color/md_theme_light_onSurfaceVariant</item>
-        <item name="colorOutline">@color/md_theme_light_outline</item>
-        <item name="colorOnSurfaceInverse">@color/md_theme_light_inverseOnSurface</item>
-        <item name="colorSurfaceInverse">@color/md_theme_light_inverseSurface</item>
-        <item name="colorPrimaryInverse">@color/md_theme_light_inversePrimary</item>
+
+        <item name="colorPrimary">@color/scaffold_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/scaffold_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/scaffold_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/scaffold_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/scaffold_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/scaffold_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/scaffold_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/scaffold_theme_light_onSecondaryContainer
+        </item>
+        <item name="colorTertiary">@color/scaffold_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/scaffold_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/scaffold_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/scaffold_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/scaffold_theme_light_error</item>
+        <item name="colorErrorContainer">@color/scaffold_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/scaffold_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/scaffold_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/scaffold_theme_light_background</item>
+        <item name="colorOnBackground">@color/scaffold_theme_light_onBackground</item>
+        <item name="colorSurface">@color/scaffold_theme_light_surface</item>
+        <item name="colorOnSurface">@color/scaffold_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/scaffold_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/scaffold_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/scaffold_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/scaffold_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/scaffold_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/scaffold_theme_light_inversePrimary</item>
+
+    </style>
+
+    <style name="ScaffoldDialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/scaffold_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/scaffold_theme_light_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/scaffold_theme_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/scaffold_theme_light_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/scaffold_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/scaffold_theme_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/scaffold_theme_light_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/scaffold_theme_light_onSecondaryContainer
+        </item>
+        <item name="colorTertiary">@color/scaffold_theme_light_tertiary</item>
+        <item name="colorOnTertiary">@color/scaffold_theme_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/scaffold_theme_light_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/scaffold_theme_light_onTertiaryContainer</item>
+        <item name="colorError">@color/scaffold_theme_light_error</item>
+        <item name="colorErrorContainer">@color/scaffold_theme_light_errorContainer</item>
+        <item name="colorOnError">@color/scaffold_theme_light_onError</item>
+        <item name="colorOnErrorContainer">@color/scaffold_theme_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/scaffold_theme_light_background</item>
+        <item name="colorOnBackground">@color/scaffold_theme_light_onBackground</item>
+        <item name="colorSurface">@color/scaffold_theme_light_surface</item>
+        <item name="colorOnSurface">@color/scaffold_theme_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/scaffold_theme_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/scaffold_theme_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/scaffold_theme_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/scaffold_theme_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/scaffold_theme_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/scaffold_theme_light_inversePrimary</item>
+    </style>
+
+    <style name="ScaffoldBottomSheetDialog" parent="ScaffoldDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
+        <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+    </style>
+
+    <style name="ScaffoldBottomSheetDialog.SurfaceTopRadius" parent="ScaffoldBottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ScaffoldBottomSheetSurfaceTopRadius</item>
+    </style>
+
+    <style name="ScaffoldBottomSheetDialog.SurfaceTopRadius.DisableDraggable" parent="ScaffoldBottomSheetDialog.SurfaceTopRadius">
+        <item name="behavior_draggable">false</item>
+    </style>
+
+    <style name="ScaffoldBottomSheetSurfaceTopRadius" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/scaffold_bg_surface_top_rounding_medium</item>
+        <item name="behavior_peekHeight">1000dp</item>
     </style>
 
 </resources>
