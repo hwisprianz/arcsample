@@ -1,5 +1,6 @@
 package com.z.arcsample.ui.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -56,30 +57,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showDatePicker() {
-        DatePickerBottomSheet.Builder(this)
-            .setOnViewClickListener(object : DatePickerBottomSheet.OnViewClickListener {
-
-                override fun onTopStartButtonClick(dialog: DatePickerBottomSheet) {
-                    dialog.dismiss()
-                }
-
-                override fun onTopEndButtonClick(dialog: DatePickerBottomSheet) {
-                    val date: String = dialog.getSelectedDate().let {
-                        "${it.get(Calendar.YEAR)}" +
-                                "/${it.get(Calendar.MONTH) + 1}" +
-                                "/${it.get(Calendar.DAY_OF_MONTH)}"
-                    }
-                    Toast.makeText(
-                        this@MainActivity,
-                        "select: $date",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    dialog.dismiss()
-                }
-
-            })
-            .build()
-            .show()
+        startActivity(Intent(this, DatePickerSampleActivity::class.java))
     }
 
 }

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/scaffold_ic_arrow_back_on_primary_24px"
+        app:title="@string/func_date_picker"
+        app:titleTextColor="?attr/colorOnPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/from"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.2"
+            android:hint="@string/scaffold_year_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_from_year"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="4"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="@string/scaffold_month_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_from_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="@string/scaffold_day_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_from_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/to"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1.2"
+            android:hint="@string/scaffold_year_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_to_year"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="4"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="@string/scaffold_month_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_to_month"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:hint="@string/scaffold_day_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_to_day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLength="2"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="16sp"
+        tools:text="@tools:sample/lorem" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_pick_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/pick_date" />
+
+</LinearLayout>

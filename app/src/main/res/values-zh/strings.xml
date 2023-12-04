@@ -4,5 +4,8 @@
     <string name="app_name">ArcSample</string>
 
     <string name="func_date_picker">日期选择器</string>
+    <string name="from">从</string>
+    <string name="to">至</string>
+    <string name="pick_date">选择日期</string>
 
 </resources>

@@ -297,7 +297,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setFrom: month must be greater than 0; but set month is $month; has reset month to 1" }
                 1
             } else if (month > 12) {
-                w { "setFrom: month must be less than 13; but set month is $month; has reset month to 12" }
+                w { "setFrom: month must be no greater 12; but set month is $month; has reset month to 12" }
                 12
             } else {
                 month
@@ -310,7 +310,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setFrom: day must be greater than 0; but set day is $day; has reset day to 1" }
                 1
             } else if (day > dayMax) {
-                w { "setFrom: When $checkedYear/$checkedMonth, day must be less than $dayMax; but set day is $day; has reset day to $dayMax" }
+                w { "setFrom: When $checkedYear/$checkedMonth, day must be no greater $dayMax; but set day is $day; has reset day to $dayMax" }
                 dayMax
             } else {
                 day
@@ -354,7 +354,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setTo: month must be greater than 0; but set month is $month; has reset month to 1" }
                 1
             } else if (month > 12) {
-                w { "setTo: month must be less than 13; but set month is $month; has reset month to 12" }
+                w { "setTo: month must be no greater 12; but set month is $month; has reset month to 12" }
                 12
             } else {
                 month
@@ -367,7 +367,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setTo: day must be greater than 0; but set day is $day; has reset day to 1" }
                 1
             } else if (day > dayMax) {
-                w { "setTo: When $checkedYear/$checkedMonth, day must be less than $dayMax; but set day is $day; has reset day to $dayMax" }
+                w { "setTo: When $checkedYear/$checkedMonth, day must be no greater $dayMax; but set day is $day; has reset day to $dayMax" }
                 dayMax
             } else {
                 day
@@ -407,7 +407,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setDefault: month must be greater than 0; but set month is $month; has reset month to 1" }
                 1
             } else if (month > 12) {
-                w { "setDefault: month must be less than 13; but set month is $month; has reset month to 12" }
+                w { "setDefault: month must be no greater 13; but set month is $month; has reset month to 12" }
                 12
             } else {
                 month
@@ -420,7 +420,7 @@ class DatePickerBottomSheet private constructor(context: Context) :
                 w { "setDefault: day must be greater than 0; but set day is $day; has reset day to 1" }
                 1
             } else if (day > dayMax) {
-                w { "setDefault: When $checkedYear/$checkedMonth, day must be less than $dayMax; but set day is $day; has reset day to $dayMax" }
+                w { "setDefault: When $checkedYear/$checkedMonth, day must be no greater $dayMax; but set day is $day; has reset day to $dayMax" }
                 dayMax
             } else {
                 day

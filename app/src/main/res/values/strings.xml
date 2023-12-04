@@ -4,4 +4,8 @@
 
     <string name="func_date_picker">date picker</string>
 
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="pick_date">pick date</string>
+
 </resources>
