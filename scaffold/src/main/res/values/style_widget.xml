@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Button -->
+    <style name="ScaffoldButtonBar" parent="Widget.AppCompat.ButtonBar" />
+
+   <!-- <style name="ScaffoldButtonBar.OnPrimary" parent="ScaffoldButtonBar">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>-->
+
+</resources>

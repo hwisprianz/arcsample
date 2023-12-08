@@ -18,6 +18,8 @@ data class FunctionBean(
 
         const val KEY_DATE_PICKER = "date_picker"
 
+        const val KEY_MEDIA_PICKER = "media_picker"
+
     }
 
 }

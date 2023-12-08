@@ -19,6 +19,11 @@ class FunctionRepository {
                 context.getString(R.string.func_date_picker),
                 FunctionBean.KEY_DATE_PICKER
             ),
+            FunctionBean(
+                R.drawable.ic_gallery_picker_on_surface_24dp,
+                context.getString(R.string.func_media_picker),
+                FunctionBean.KEY_MEDIA_PICKER
+            )
         )
     }
 

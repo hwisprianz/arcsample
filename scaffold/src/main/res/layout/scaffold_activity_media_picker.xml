@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:contentInsetEnd="48dp"
+        app:navigationIcon="@drawable/scaffold_ic_close_on_primary_24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_bucket"
+            style="@style/ScaffoldButtonBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/scaffold_bg_surface_a10_rmax"
+            android:drawablePadding="4dp"
+            android:elevation="0dp"
+            android:ellipsize="end"
+            android:minHeight="36dp"
+            android:paddingHorizontal="6dp"
+            android:singleLine="true"
+            android:stateListAnimator="@null"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/scaffold_anim_circle_down_filled_on_primary_24dp"
+            tools:text="@tools:sample/lorem/random" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/v_content_mask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:background="@android:color/black"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_buckets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/scaffold_bg_surface_bottom_rounding_medium"
+            android:visibility="invisible"
+            tools:itemCount="4"
+            tools:listitem="@layout/scaffold_cell_media_bucket"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/scaffold_ic_circle_down_filled_on_primary_24dp"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360" />

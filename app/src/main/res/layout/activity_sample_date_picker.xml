@@ -12,7 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:navigationIcon="@drawable/scaffold_ic_arrow_back_on_primary_24px"
-        app:title="@string/func_date_picker"
+        app:title="@string/scaffold_date_picker_title"
         app:titleTextColor="?attr/colorOnPrimary" />
 
     <LinearLayout

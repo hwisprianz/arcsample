@@ -11,6 +11,7 @@ import com.z.arcsample.bean.FunctionBean
 import com.z.arcsample.ui.adapter.FunctionAdapter
 import com.z.arcsample.viewmodel.MainViewModel
 import com.z.scaffold.sugar.attachOnItemClickListener
+import com.z.scaffold.ui.activity.MediaPickerActivity
 import com.z.scaffold.ui.bottomsheet.DatePickerBottomSheet
 import java.util.Calendar
 
@@ -47,7 +48,8 @@ class MainActivity : AppCompatActivity() {
     private fun setViewListener() {
         mViewBinding.rvFunctions.attachOnItemClickListener { _, position, _ ->
             when (mFunctionAdapter.getItemSafety(position)?.key) {
-                FunctionBean.KEY_DATE_PICKER -> showDatePicker()
+                FunctionBean.KEY_DATE_PICKER -> launchDatePickerSample()
+                FunctionBean.KEY_MEDIA_PICKER -> launchMediaPickerSample()
             }
         }
     }
@@ -56,8 +58,12 @@ class MainActivity : AppCompatActivity() {
         mViewModel.functionsLiveData.observe(this) { mFunctionAdapter.submitList(it) }
     }
 
-    private fun showDatePicker() {
+    private fun launchDatePickerSample() {
         startActivity(Intent(this, DatePickerSampleActivity::class.java))
+    }
+
+    private fun launchMediaPickerSample() {
+        startActivity(Intent(this, MediaPickerActivity::class.java))
     }
 
 }

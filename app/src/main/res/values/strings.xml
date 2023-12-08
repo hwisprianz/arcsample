@@ -7,5 +7,7 @@
     <string name="from">from</string>
     <string name="to">to</string>
     <string name="pick_date">pick date</string>
+    <string name="func_media_picker">media picker</string>
+    <string name="pick_media">pick media</string>
 
 </resources>
