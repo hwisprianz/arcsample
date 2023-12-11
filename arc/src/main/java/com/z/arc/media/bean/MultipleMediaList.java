@@ -6,12 +6,15 @@ import androidx.annotation.Nullable;
 import com.z.arc.media.MediaConstance;
 
 /**
- * <p>
+ * 多个媒体列表的组合列表
  * <p>
  * Created by Blate on 2023/12/8
  */
 public class MultipleMediaList implements IMediaList {
 
+    /**
+     * 子列表
+     */
     private final IMediaList[] mMediaLists;
 
     public MultipleMediaList(@NonNull IMediaList[] mediaLists, @MediaConstance.SortDef int sort) {
@@ -28,6 +31,7 @@ public class MultipleMediaList implements IMediaList {
 
     @Override
     public void fill(int index, @NonNull MediaBean container) {
+        // TODO: 2023/12/11 考虑多个子列表的排序,应该使用一个低时间成本的综合排序实现
         int skip = 0;
         for (IMediaList mediaList : mMediaLists) {
             if (index < skip + mediaList.getCount()) {

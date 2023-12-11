@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 /**
- * <p>
+ * 空的媒体列表
  * <p>
  * Created by Blate on 2023/12/11
  */
@@ -13,12 +13,12 @@ public class EmptyMediaList implements IMediaList {
     @Nullable
     @Override
     public MediaBean get(int index) {
-        return null;
+        throw new UnsupportedOperationException("EmptyMediaList can not get");
     }
 
     @Override
     public void fill(int index, @NonNull MediaBean container) {
-
+        throw new UnsupportedOperationException("EmptyMediaList can not fill");
     }
 
     @Override

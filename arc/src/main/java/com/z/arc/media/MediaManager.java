@@ -15,13 +15,30 @@ import com.z.arc.media.bean.MediaBucketBean;
 import java.util.Comparator;
 
 /**
- * <p>
+ * 媒体工具类
  * <p>
  * Created by Blate on 2023/12/7
  */
 public class MediaManager {
 
 
+    /**
+     * 从游标中填充媒体到容器
+     * <p>
+     * -1 为无效的索引位置; <b>有且仅有id的索引时必须的</b>
+     *
+     * @param cursor            游标
+     * @param baseUri           基础Uri
+     * @param container         容器
+     * @param indexId           游标id索引
+     * @param indexData         游标data索引
+     * @param indexBucketId     游标桶id索引
+     * @param indexMimeType     游标类型索引
+     * @param indexDuration     游标时长索引
+     * @param indexTitle        游标标题索引
+     * @param indexDateTaken    游标拍摄日期索引
+     * @param indexDateModified 游标修改日期索引
+     */
     public static void fillFromCursor(@NonNull Cursor cursor, @NonNull Uri baseUri, @NonNull MediaBean container,
                                       @IntRange(from = -1) int indexId,
                                       @IntRange(from = -1) int indexData,
@@ -71,6 +88,22 @@ public class MediaManager {
         }
     }
 
+    /**
+     * 从游标中创建媒体对象
+     * -1 为无效的索引位置; <b>有且仅有id的索引时必须的</b>
+     *
+     * @param cursor            游标
+     * @param baseUri           基础Uri
+     * @param indexId           游标id索引
+     * @param indexData         游标data索引
+     * @param indexBucketId     游标桶id索引
+     * @param indexMimeType     游标类型索引
+     * @param indexDuration     游标时长索引
+     * @param indexTitle        游标标题索引
+     * @param indexDateTaken    游标拍摄日期索引
+     * @param indexDateModified 游标修改日期索引
+     * @return 媒体对象
+     */
     @NonNull
     public static MediaBean createFromCursor(@NonNull Cursor cursor, @NonNull Uri baseUri,
                                              @IntRange(from = -1) int indexId,
@@ -94,6 +127,15 @@ public class MediaManager {
         return bean;
     }
 
+    /**
+     * 从游标中创建媒体对象
+     * -1 为无效的索引位置; <b>有且仅有id的索引时必须的</b>
+     * 自动从游标中尝试获取需要的索引
+     *
+     * @param cursor  游标
+     * @param baseUri 基础Uri
+     * @return 媒体对象
+     */
     @NonNull
     public static MediaBean createFromCursor(@NonNull Cursor cursor, @NonNull Uri baseUri) {
         return createFromCursor(cursor, baseUri,
@@ -107,6 +149,14 @@ public class MediaManager {
                 cursor.getColumnIndex(MediaStore.MediaColumns.DATE_MODIFIED));
     }
 
+    /**
+     * 创建一个媒体比较器
+     * <p>
+     * <b>排序实现应该和从数据库查询的排序相同</b>
+     *
+     * @param sort 排序方式
+     * @return 比较器
+     */
     public static Comparator<MediaBean> createMediaComparator(@MediaConstance.SortDef int sort) {
         return (o1, o2) -> {
             if (o1 == null && o2 == null) {
@@ -116,8 +166,8 @@ public class MediaManager {
             } else if (o2 == null) {
                 return sort == MediaConstance.Sort.SORT_ASCENDING ? 1 : -1;
             } else {
-                long date1 = o1.dateTaken == 0 ? o1.dateModified : o1.dateTaken;
-                long date2 = o2.dateTaken == 0 ? o2.dateModified : o2.dateTaken;
+                long date1 = o1.dateTaken == 0 ? o1.dateModified * 1000 : o1.dateTaken;
+                long date2 = o2.dateTaken == 0 ? o2.dateModified * 1000 : o2.dateTaken;
                 if (date1 != date2) {
                     return sort == MediaConstance.Sort.SORT_ASCENDING ?
                             Long.compare(date1, date2) :
@@ -131,6 +181,13 @@ public class MediaManager {
         };
     }
 
+    /**
+     * 创建一个媒体桶比较器
+     * <p>
+     * 依据桶的显示名称字典序排序
+     *
+     * @return 比较器
+     */
     public static Comparator<MediaBucketBean> createMediaBucketComparator() {
         return (o1, o2) -> {
             final String s1 = o1 == null ? null : o1.displayName;

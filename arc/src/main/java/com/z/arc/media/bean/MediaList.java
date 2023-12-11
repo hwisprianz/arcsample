@@ -11,32 +11,71 @@ import androidx.annotation.Nullable;
 import com.z.arc.media.MediaManager;
 
 /**
- * <p>
+ * 单个位置的媒体列表
  * <p>
  * Created by Blate on 2023/12/8
  */
 public class MediaList implements IMediaList {
 
+    /**
+     * 位置Uri
+     */
     @NonNull
     private final Uri baseUri;
 
+    /**
+     * 游标
+     */
     @Nullable
     private final Cursor cursor;
 
+    /**
+     * 游标媒体id索引
+     */
     @IntRange(from = -1)
     private final int indexId;
+
+    /**
+     * 游标data索引
+     * <p>
+     * 这个索引位置存储媒体路径
+     */
     @IntRange(from = -1)
     private final int indexData;
+
+    /**
+     * 游标桶Id索引
+     */
     @IntRange(from = -1)
     private final int indexBucketId;
+
+    /**
+     * 游标类型索引
+     */
     @IntRange(from = -1)
     private final int indexMimeType;
+
+    /**
+     * 游标时长索引
+     */
     @IntRange(from = -1)
     private final int indexDuration;
+
+    /**
+     * 游标标题索引
+     */
     @IntRange(from = -1)
     private final int indexTitle;
+
+    /**
+     * 游标拍摄日期索引
+     */
     @IntRange(from = -1)
     private final int indexDateTaken;
+
+    /**
+     * 游标修改日期索引
+     */
     @IntRange(from = -1)
     private final int indexDateModified;
 

@@ -7,21 +7,35 @@ import androidx.annotation.Nullable;
 import java.util.Objects;
 
 /**
- * <p>
+ * 媒体桶
  * <p>
  * Created by Blate on 2023/12/4
  */
 public class MediaBucketBean {
 
+    /**
+     * 桶id
+     * <p>
+     * 如果没有id,则表示所有桶
+     */
     @Nullable
     public final Long id;
 
+    /**
+     * 桶的显示名字
+     */
     @Nullable
     public String displayName;
 
+    /**
+     * 桶的封面
+     */
     @Nullable
     public Uri cover = null;
 
+    /**
+     * 桶内媒体数量
+     */
     @Nullable
     public Integer count = null;
 
