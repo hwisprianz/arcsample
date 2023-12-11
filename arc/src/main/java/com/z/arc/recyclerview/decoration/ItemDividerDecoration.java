@@ -27,7 +27,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Created by Blate on 2023/6/20
  */
 @SuppressWarnings("unused")
-public class ItemDividerDecoration extends ItemSpaceDecoration {
+public class ItemDividerDecoration extends ItemSpacingDecoration {
 
     /**
      * 主轴分割线开始边距

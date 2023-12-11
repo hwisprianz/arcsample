@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_media"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="ig_video_background,ig_video_flag,tv_video_duration" />
+
+    <View
+        android:id="@+id/ig_video_background"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:alpha="0.4"
+        android:background="?attr/colorSurfaceInverse"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ig_video_flag"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="2dp"
+        android:src="@drawable/scaffold_video_on_surface_inverse_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/ig_video_background"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="@id/ig_video_background"
+        app:layout_constraintTop_toTopOf="@id/ig_video_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_video_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="?attr/colorOnSurfaceInverse"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/ig_video_background"
+        app:layout_constraintEnd_toEndOf="@id/ig_video_background"
+        app:layout_constraintTop_toTopOf="@id/ig_video_background"
+        tools:text="00:00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

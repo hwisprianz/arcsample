@@ -9,7 +9,7 @@ import android.net.Uri;
  */
 public class MediaBean {
 
-    public final long id;
+    public long id;
 
     public Uri uri;
 
@@ -19,14 +19,15 @@ public class MediaBean {
 
     public String mimeType;
 
+    public long duration;
+
     public String title;
 
     public long dateTaken;
 
     public long dateModified;
 
-    public MediaBean(long id) {
-        this.id = id;
+    public MediaBean() {
     }
 
 }

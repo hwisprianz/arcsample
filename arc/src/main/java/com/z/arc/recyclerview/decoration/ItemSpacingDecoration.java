@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * Created by Blate on 2023/6/19
  */
 @SuppressWarnings("unused")
-public class ItemSpaceDecoration
+public class ItemSpacingDecoration
         extends RecyclerView.ItemDecoration {
 
     /**
@@ -54,7 +54,7 @@ public class ItemSpaceDecoration
      * @param startSpace     开始间距
      * @param endSpace       结束间距
      */
-    public ItemSpaceDecoration(@Px int mainAxisSpace, @Px int crossAxisSpace, @Px int startSpace, @Px int endSpace) {
+    public ItemSpacingDecoration(@Px int mainAxisSpace, @Px int crossAxisSpace, @Px int startSpace, @Px int endSpace) {
         this.mMainAxisSpace = mainAxisSpace;
         this.mCrossAxisSpace = crossAxisSpace;
         this.mStartSpace = startSpace;
@@ -68,7 +68,7 @@ public class ItemSpaceDecoration
      * @param mainAxisSpace  主轴间距
      * @param crossAxisSpace 交叉轴间距
      */
-    public ItemSpaceDecoration(@Px int mainAxisSpace, @Px int crossAxisSpace) {
+    public ItemSpacingDecoration(@Px int mainAxisSpace, @Px int crossAxisSpace) {
         this(mainAxisSpace, crossAxisSpace, 0, 0);
     }
 
@@ -77,7 +77,7 @@ public class ItemSpaceDecoration
      *
      * @param space 间距
      */
-    public ItemSpaceDecoration(@Px int space) {
+    public ItemSpacingDecoration(@Px int space) {
         this(space, space, 0, 0);
     }
 

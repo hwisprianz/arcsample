@@ -3,7 +3,6 @@ package com.z.scaffold.ui.activity
 import android.animation.ValueAnimator
 import android.graphics.Outline
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
 import android.view.animation.AccelerateInterpolator
@@ -12,14 +11,16 @@ import android.view.animation.DecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.z.arc.media.bean.MediaBucketBean
+import com.z.arc.recyclerview.decoration.ItemSpacingDecoration
 import com.z.scaffold.R
 import com.z.scaffold.databinding.ScaffoldActivityMediaPickerBinding
 import com.z.scaffold.sugar.attachOnItemClickListener
+import com.z.scaffold.sugar.dp
+import com.z.scaffold.ui.adapter.MediaAdapter
 import com.z.scaffold.ui.adapter.MediaBucketAdapter
 import com.z.scaffold.viewmode.MediaPickerViewModel
-
 
 /**
  *
@@ -39,6 +40,8 @@ class MediaPickerActivity : AppCompatActivity() {
     private val mBucketAdapter: MediaBucketAdapter = MediaBucketAdapter()
 
     private val mBucketArrowAnim: ValueAnimator = ValueAnimator()
+
+    private val mMediaAdapter: MediaAdapter = MediaAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,6 +83,10 @@ class MediaPickerActivity : AppCompatActivity() {
         mViewBinding.rvBuckets.layoutManager = LinearLayoutManager(this)
         mViewBinding.rvBuckets.adapter = mBucketAdapter
 
+        mViewBinding.rvMedia.layoutManager = GridLayoutManager(this, 4)
+        mViewBinding.rvMedia.addItemDecoration(ItemSpacingDecoration(2.dp(this)))
+        mViewBinding.rvMedia.adapter = mMediaAdapter
+
     }
 
     private fun subscribeData() {
@@ -88,6 +95,9 @@ class MediaPickerActivity : AppCompatActivity() {
         }
         mViewModel.bucketLive.observe(this) { bucket ->
             mViewBinding.btBucket.text = bucket?.displayName
+        }
+        mViewModel.mediasLive.observe(this) { medias ->
+            mMediaAdapter.updateMediaList(medias)
         }
     }
 
